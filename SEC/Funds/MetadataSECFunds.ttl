@@ -1,0 +1,67 @@
+# baseURI: https://spec.edmcouncil.org/fibo/ontology/master/latest/SEC/Funds/MetadataSECFunds/
+# imports: https://spec.edmcouncil.org/fibo/ontology/master/latest/FND/Utilities/AnnotationVocabulary/
+
+@base <https://spec.edmcouncil.org/fibo/ontology/master/latest/SEC/Funds/MetadataSECFunds/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix fibo-sec-fnd-mod: <https://spec.edmcouncil.org/fibo/ontology/SEC/Funds/MetadataSECFunds/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sm: <http://www.omg.org/techprocess/ab/SpecificationMetadata/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://spec.edmcouncil.org/fibo/ontology/SEC/Funds/MetadataSECFunds/>
+	a owl:Ontology ;
+	rdfs:label "Metadata SEC Funds Module" ;
+	dct:abstract "This module contains ontologies of funds concepts covering fund structure, definition and involved parties, along with concepts for tradable fund units." ;
+	dct:issued "2021-03-29T18:00:00"^^xsd:dateTime ;
+	dct:license "http://opensource.org/licenses/MIT"^^xsd:anyURI ;
+	dct:title "EDMC Financial Industry Business Ontology (FIBO) Securities (SEC) Domain, Funds Module" ;
+	sm:contentLanguage "https://www.w3.org/TR/owl2-quick-reference"^^xsd:anyURI ;
+	sm:copyright
+		"Copyright (c) 2020-2021 EDM Council, Inc." ,
+		"Copyright (c) 2020-2021 Object Management Group, Inc."
+		;
+	sm:dependsOn
+		"https://spec.edmcouncil.org/fibo/ontology/BE/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/FBC/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/FND/"^^xsd:anyURI ,
+		"https://spec.edmcouncil.org/fibo/ontology/IND/"^^xsd:anyURI ,
+		"https://www.omg.org/spec/LCC/"^^xsd:anyURI
+		;
+	sm:fileAbbreviation "fibo-sec-fnd-mod" ;
+	sm:filename "MetadataSECFunds.rdf" ;
+	owl:imports <https://spec.edmcouncil.org/fibo/ontology/master/latest/FND/Utilities/AnnotationVocabulary/> ;
+	owl:versionIRI <https://spec.edmcouncil.org/fibo/ontology/master/latest/SEC/Funds/MetadataSECFunds/> ;
+	.
+
+fibo-sec-fnd-mod:FundsModule
+	a
+		owl:NamedIndividual ,
+		sm:Module
+		;
+	rdfs:label "Funds Module" ;
+	dct:abstract "This module contains ontologies of funds concepts covering fund structure, definition and involved parties, along with concepts for tradable fund units." ;
+	dct:hasPart
+		<https://spec.edmcouncil.org/fibo/ontology/SEC/Funds/CollectiveInvestmentVehicles/> ,
+		<https://spec.edmcouncil.org/fibo/ontology/SEC/Funds/Funds/>
+		;
+	dct:license "http://opensource.org/licenses/MIT"^^xsd:anyURI ;
+	sm:contributor
+		"Thematix Partners LLC" ,
+		"Wells Fargo Bank, N.A."
+		;
+	sm:copyright
+		"Copyright (c) 2020-2021 EDM Council, Inc." ,
+		"Copyright (c) 2020-2021 Object Management Group, Inc."
+		;
+	sm:keyword
+		"collective investment vehicles, CIV, special purpose vehicles" ,
+		"exchange traded funds (ETFs), hedge funds, mutual funds, pension funds, real estate investment trusts (REITs)" ,
+		"funds"
+		;
+	sm:moduleAbbreviation "fibo-sec-fund" ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/SEC/Funds/MetadataSECFunds/> ;
+	rdfs:seeAlso <https://spec.edmcouncil.org/fibo/> ;
+	.
+
